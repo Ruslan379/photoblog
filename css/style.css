@@ -38,12 +38,19 @@ body {
 }
 
 .header-nav-list-item-link {
-    text-transform: lowercase;
+    display: inline-block;
+    /* text-transform: lowercase; */
     text-transform: uppercase;
     color: var(--color-second);
+    /*? Анімація-1 - шлях */
+    transition:
+        color, transform,
+        500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav-list-item-link:hover {
     color: var(--color-hover);
+    /* color: red; */
+    transform: scale(1.2);
 }
 
 /*! section gallery */
@@ -96,4 +103,18 @@ body {
     margin-top: 90px;
     padding: 20px 48px 21px 48px;
     background-color: inherit;
+    box-shadow: 6px 6px 8px #636363;
+    /*? Анімація-1 - шлях */
+    transition:
+        color, font-size, color, background-color, border-color, border-radius,box-shadow, transform,
+        1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-button:hover {
+    font-size: 1.1em;
+    color: #6a3e00;
+    background-color: #fff9c3;
+    border-color: aqua;
+    border-radius: 12px;
+    box-shadow: 5px 5px 6px #003b3b;
+    transform: scale(1.1);
 }
